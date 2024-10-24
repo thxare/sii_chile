@@ -28,7 +28,7 @@ export const postInfo = async (rut, dv, txtCaptcha, txtCode) => {
   if (response.ok) {
     const html = await response.text();
     const data = parseHtml(html, rut, dv);
-    console.log(data);
+    return data;
   } else {
     console.error("Error:", response.status);
   }

@@ -25,7 +25,8 @@ export const getInfoSii = async (rut, dv, retries = 3) => {
       (input) => input.value
     );
     const txtCode = decodeCaptcha(captchaValue);
-    await postInfo(rut, dv, captchaValue, txtCode);
+    const result = await postInfo(rut, dv, captchaValue, txtCode);
+    return result;
   } catch (err) {
     if (retries > 0) {
       console.log(`Retrying... (${3 - retries + 1})`);
