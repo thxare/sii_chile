@@ -23,9 +23,7 @@ app.listen(3030, () => {
   console.log("Escuchando en puerto 3030");
 });
 
-//import { getInfoSii } from './services/browser.js';
-
-//getInfoSii("12345678", "9");
+//req.body {"rut":"12345678","dv":"9"}
 //rut example: 12345678-9
 //data
 // {
